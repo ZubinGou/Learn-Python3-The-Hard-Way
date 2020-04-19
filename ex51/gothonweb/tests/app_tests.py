@@ -14,6 +14,6 @@ def test_index():
     assert_in(b"Fill Out This Form", rv.data)
 
     data = {'name': 'Mr.Doggy', 'greet': 'Hola'}
-    rv = web.post('/holle', follow_redirects=True, data=data)
+    rv = web.post('/hello', follow_redirects=True, data=data)
     assert_in(b'Mr.Doggy', rv.data)
     assert_in(b'Hola', rv.data)
